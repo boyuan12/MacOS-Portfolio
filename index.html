@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+</head>
+<body>
+    <img src="folder.png" class="folder" ondblclick="fileOpen('secret-folder')" id="1">
+    <div class="folder-text">
+        <span>Secret...</span>
+    </div>
+
+    <img src="pdf.jpeg" class="folder" ondblclick='fileOpen("resume")'>
+    <div class="folder-text">
+        <span>Resume</span>
+    </div>
+
+    <img src="python.png" class="folder" ondblclick='fileOpen("python")'>
+    <div class="folder-text">
+        <span>Resume</span>
+    </div>
+
+    <img src="chrome.jpeg" class="folder" ondblclick='fileOpen("chrome")' id="logo">
+    <div class="folder-text">
+        <span>Chrome</span>
+    </div>
+
+    <div class="resizable" id="resume" style="display: none;">
+        <div id="resumeheader" width="100vh" height="25px" style="background-color: white;">
+            <div style="border-radius: 50%; width: 25px; height: 25px; background-color: red;" onclick="fileClose('resume')"></div>
+        </div>
+        <hr>
+        <iframe src="BoyuanLiuResumeV2.html" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+    <div class="resizable" id="python" style="display: none;">
+        <div id="pythonheader" width="100vh" height="25px" style="background-color: white;">
+            <div style="border-radius: 50%; width: 25px; height: 25px; background-color: red;" onclick="fileClose('python')"></div>
+        </div>
+        <hr>
+        <iframe src="ide.html" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+    
+    <div class="resizable" id="chrome" style="display: none; background-color: white;">
+        <div id="chromeheader" width="100vh" height="25px" style="background-color: white;">
+            <div style="border-radius: 50%; width: 25px; height: 25px; background-color: red;" onclick="fileClose('chrome')"></div>
+        </div>
+        <hr>
+        <iframe src="chrome.html" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+
+
+    <div class="resizable" id="secret-folder" style="display: none; background-color: white;">
+        <div id="secret-folderheader" width="100vh" height="25px" style="background-color: white;">
+            <div style="border-radius: 50%; width: 25px; height: 25px; background-color: red;" onclick="fileClose('secret-folder')"></div>
+        </div>
+        <hr>
+        <div>
+            <span>Hello world!</span>
+            <hr>
+            <span>Hello again!</span>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".resizable").resizable({
+                animate: true,
+                animateEasing: 'swing',
+                animateDuration: 500
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

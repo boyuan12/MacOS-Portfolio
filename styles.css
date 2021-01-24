@@ -1,0 +1,69 @@
+@font-face {
+    font-family: sfpro;
+    src: url(sf-pro.ttf);
+    font-weight: bold;
+}
+
+body {
+    background-image: url('wallpaper.jpg');
+    font-family: sfpro;
+    /* text-align: left; */
+}
+
+.folder {
+    width: 7%;
+    height: 7%;
+}
+
+.folder-text {
+    margin-left: 10px;
+}
+
+.content {
+    background-color: white;
+    border: 2px solid black
+}
+
+
+.ui-resizable-helper {
+    border: 1px dotted gray;
+}
+.resizable {
+    display: block;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    border: 2px solid gray;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#resume, #python, #chrome, #secret-folder {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+  }
+
+
+#resumeheader, #pythonheader, #chromeheader, #secret-folderheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+#logo {
+    box-shadow: 10px 10px;
+}
